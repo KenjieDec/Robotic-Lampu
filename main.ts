@@ -23,28 +23,31 @@ basic.forever(function () {
         music.startMelody(music.builtInMelody(Melodies.Prelude), MelodyOptions.Once)
         for (let index = 0; index < 7; index++) {
             basic.showLeds(`
-                . . . . .
                 . . # . .
-                . # # # .
+                # # # # #
+                . . # . .
                 . . # . .
                 . . # . .
                 `)
             basic.pause(300)
             basic.showLeds(`
-                . . . . .
                 . . # . .
-                . # # # .
+                # # # # #
                 . . # . .
                 . # . # .
+                # . . . #
                 `)
             basic.pause(300)
         }
         music.setTempo(140)
         music.startMelody(music.builtInMelody(Melodies.Prelude), MelodyOptions.Once)
         for (let index = 0; index < 36; index++) {
-            led.toggle(1, 4)
+            led.toggle(0, 4)
+            led.toggle(4, 4)
             led.toggle(2, 4)
-            led.toggle(3, 4)
+            led.toggle(1, 3)
+            led.toggle(2, 3)
+            led.toggle(3, 3)
             basic.pause(200)
         }
         basic.pause(500)
